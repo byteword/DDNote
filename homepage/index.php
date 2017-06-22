@@ -6,9 +6,9 @@
 <body>
 	<span>
 		<?php
-			echo 'Hello, World!';
+			print "This is DDNote Front Page";
 		?>
-	</span> <p/>
+	</span> <br />
 	<span>
 	Link to GitHub <a href="https://github.com/byteword/DDNote">Project Page</a>
 	</span>

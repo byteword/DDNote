@@ -4,3 +4,7 @@ api_version: 1
 handlers:
 - url: /.*
   script: index.php
+
+handlers:
+- url: /api/*/*/
+  script: ./api/api.php?\1=\2
