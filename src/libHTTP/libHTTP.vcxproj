@@ -111,6 +111,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="header\LibHTTP.h" />
+    <ClInclude Include="incl\http.h" />
+    <ClInclude Include="incl\socket.h" />
+    <ClInclude Include="incl\task.h" />
+    <ClInclude Include="incl\thread.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp\libhttp.cpp" />

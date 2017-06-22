@@ -13,13 +13,28 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\Header">
+    <Filter Include="헤더 파일\intl_header">
+      <UniqueIdentifier>{8d250389-55e7-4ed2-9459-3f876d339dc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\header">
       <UniqueIdentifier>{0d1c5e19-14ce-4912-8d64-22827b0d9b6f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="header\LibHTTP.h">
-      <Filter>헤더 파일\Header</Filter>
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\http.h">
+      <Filter>헤더 파일\intl_header</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\socket.h">
+      <Filter>헤더 파일\intl_header</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\thread.h">
+      <Filter>헤더 파일\intl_header</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\task.h">
+      <Filter>헤더 파일\intl_header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
