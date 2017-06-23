@@ -10,6 +10,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libHTTP", "libHTTP\libHTTP.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libBase", "libBase\libBase.vcxproj", "{9385250E-B238-42F7-92BC-45D81F085F1E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UTLib", "UTLib\UTLib.vcxproj", "{9371B140-34C5-42A4-865E-958032A6831A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9385250E-B238-42F7-92BC-45D81F085F1E} = {9385250E-B238-42F7-92BC-45D81F085F1E}
+		{F449C91E-67BD-440E-8B6E-8D7613040156} = {F449C91E-67BD-440E-8B6E-8D7613040156}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +40,14 @@ Global
 		{9385250E-B238-42F7-92BC-45D81F085F1E}.Release|x64.Build.0 = Release|x64
 		{9385250E-B238-42F7-92BC-45D81F085F1E}.Release|x86.ActiveCfg = Release|Win32
 		{9385250E-B238-42F7-92BC-45D81F085F1E}.Release|x86.Build.0 = Release|Win32
+		{9371B140-34C5-42A4-865E-958032A6831A}.Debug|x64.ActiveCfg = Debug|x64
+		{9371B140-34C5-42A4-865E-958032A6831A}.Debug|x64.Build.0 = Debug|x64
+		{9371B140-34C5-42A4-865E-958032A6831A}.Debug|x86.ActiveCfg = Debug|Win32
+		{9371B140-34C5-42A4-865E-958032A6831A}.Debug|x86.Build.0 = Debug|Win32
+		{9371B140-34C5-42A4-865E-958032A6831A}.Release|x64.ActiveCfg = Release|x64
+		{9371B140-34C5-42A4-865E-958032A6831A}.Release|x64.Build.0 = Release|x64
+		{9371B140-34C5-42A4-865E-958032A6831A}.Release|x86.ActiveCfg = Release|Win32
+		{9371B140-34C5-42A4-865E-958032A6831A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

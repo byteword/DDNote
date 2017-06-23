@@ -13,32 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\header">
-      <UniqueIdentifier>{0d1c5e19-14ce-4912-8d64-22827b0d9b6f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\incl">
-      <UniqueIdentifier>{8d250389-55e7-4ed2-9459-3f876d339dc1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\LibHTTP.h">
-      <Filter>헤더 파일\header</Filter>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="incl\http.h">
-      <Filter>헤더 파일\incl</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="incl\socket.h">
-      <Filter>헤더 파일\incl</Filter>
-    </ClInclude>
-    <ClInclude Include="header\libSocket.h">
-      <Filter>헤더 파일\header</Filter>
+    <ClInclude Include="UnitTest.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="cpp\libhttp.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cpp\libsocket.cpp">
+    <ClCompile Include="UTLib.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
