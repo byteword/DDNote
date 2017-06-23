@@ -24,5 +24,11 @@
     <ClInclude Include="header\oscheck.h">
       <Filter>헤더 파일\header</Filter>
     </ClInclude>
+    <ClInclude Include="incl\task.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\thread.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
