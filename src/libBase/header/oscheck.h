@@ -35,7 +35,6 @@
 #	else
 // Apple's unknown
 
-#		error "Unknown Apple platform"
 #		define __OS__ "MAC_UNK"
 #		define __MAC_UNK__ 1
 #	endif // end Apple's OS

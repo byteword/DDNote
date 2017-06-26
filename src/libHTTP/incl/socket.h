@@ -2,7 +2,7 @@
 #define __DDNOTE_SOCKET__H__INCLUDDED__
 #pragma once
 
-#include "oscheck.h"
+#include <oscheck.h>
 #include <errno.h>
 #include <sys/types.h>
 
