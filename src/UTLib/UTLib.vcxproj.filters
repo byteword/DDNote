@@ -13,22 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="헤더 파일\header">
-      <UniqueIdentifier>{0d3e71c8-6007-44c7-8159-9808ee16cd12}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="헤더 파일\incl">
-      <UniqueIdentifier>{4471dd55-a67a-4345-8e76-5c90fae8d146}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\oscheck.h">
-      <Filter>헤더 파일\header</Filter>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="incl\task.h">
-      <Filter>헤더 파일\incl</Filter>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="incl\thread.h">
-      <Filter>헤더 파일\incl</Filter>
+    <ClInclude Include="UnitTest.h">
+      <Filter>헤더 파일</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UTLib.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="UnitTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

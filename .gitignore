@@ -1,0 +1,14 @@
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/src/libBase/Debug/libBase.tlog/libBase.lastbuildstate
+/src/libBase/Debug/libBase.log
+/src/libHTTP/Debug/libHTTP.tlog/libHTTP.lastbuildstate
+/src/libHTTP/Debug/libHTTP.tlog/lib.command.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog/Lib-link.write.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog/Lib-link.read.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog/CL.write.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog/CL.read.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog/CL.command.1.tlog
+/src/libHTTP/Debug/libHTTP.tlog
