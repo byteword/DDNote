@@ -1,5 +1,5 @@
-#ifndef __DDNOTE_THREAD__H__INCLUDDED__
-#define __DDNOTE_THREAD__H__INCLUDDED__
+#ifndef __DD_LIBBASE__THREAD__H__INCLUDDED__
+#define __DD_LIBBASE__THREAD__H__INCLUDDED__
 #pragma once
 
-#endif //__DDNOTE_THREAD__H__INCLUDDED__
+#endif //__DD_LIBBASE__THREAD__H__INCLUDDED__

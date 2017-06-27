@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClInclude Include="header\ddmemorymng.h" />
     <ClInclude Include="header\ddobject.h" />
+    <ClInclude Include="header\ddtypeinfo.h" />
     <ClInclude Include="header\libbase.h" />
     <ClInclude Include="header\oscheck.h" />
     <ClInclude Include="incl\memorymng.h" />

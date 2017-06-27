@@ -1,5 +1,5 @@
-#ifndef __DDNOTE_SOCKET__H__INCLUDDED__
-#define __DDNOTE_SOCKET__H__INCLUDDED__
+#ifndef __DD_LIBHTTP__SOCKET__H__INCLUDDED__
+#define __DD_LIBHTTP__SOCKET__H__INCLUDDED__
 #pragma once
 
 #include <oscheck.h>
@@ -35,4 +35,4 @@ struct _DDSocketCtx
 #endif
 };
 
-#endif //__DDNOTE_SOCKET__H__INCLUDDED__
+#endif //__DD_LIBHTTP__SOCKET__H__INCLUDDED__

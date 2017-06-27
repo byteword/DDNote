@@ -1,8 +1,8 @@
-#ifndef __DDNOTE_LIB_HTTP__H__INCLUDDED__
-#define __DDNOTE_LIB_HTTP__H__INCLUDDED__
+#ifndef __DD__LIBHTTP__H__INCLUDDED__
+#define __DD__LIBHTTP__H__INCLUDDED__
 #pragma once
 
 #include <libbase.h>
 #include "ddsocket.h"
 
-#endif //__DDNOTE_LIB_HTTP__H__INCLUDDED__
+#endif //__DD__LIBHTTP__H__INCLUDDED__

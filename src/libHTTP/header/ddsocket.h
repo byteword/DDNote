@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef __DDNOTE_DD_SOCKET__H__INCLUDDED__
-#define __DDNOTE_DD_SOCKET__H__INCLUDDED__
+#ifndef __DD_LIBHTTP__DDSOCKET__H__INCLUDDED__
+#define __DD_LIBHTTP__DDSOCKET__H__INCLUDDED__
 
 struct _DDSocketCtx;
 class DDSocket {
@@ -18,4 +18,4 @@ public:
 };
 
 
-#endif //__DDNOTE_DD_SOCKET__H__INCLUDDED__
+#endif //__DD_LIBHTTP__DDSOCKET__H__INCLUDDED__

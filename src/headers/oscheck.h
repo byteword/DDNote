@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __DDNOTE_OSCHECK__H__INCLUDDED__
-#define __DDNOTE_OSCHECK__H__INCLUDDED__
+#ifndef __DD_LIBBASE__OSCHECK__H__INCLUDDED__
+#define __DD_LIBBASE__OSCHECK__H__INCLUDDED__
 
 #ifdef _WIN32
 
@@ -46,4 +46,4 @@
 #		define __POSIX__ 1
 #endif // OSs
 
-#endif //__DDNOTE_OSCHECK__H__INCLUDDED__
+#endif //__DD_LIBBASE__OSCHECK__H__INCLUDDED__

@@ -48,6 +48,9 @@
     <ClInclude Include="incl\memorymng.h">
       <Filter>헤더 파일\incl</Filter>
     </ClInclude>
+    <ClInclude Include="header\ddtypeinfo.h">
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp\thread.cpp">
