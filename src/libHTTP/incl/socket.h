@@ -25,7 +25,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../header/libSocket.h"
+#include "../header/ddsocket.h"
 
 struct _DDSocketCtx 
 {

@@ -70,13 +70,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)Headers;$(IncludePath)</IncludePath>
-    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
-    <SourcePath>$(VC_SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(SolutionDir)Headers;$(IncludePath)</IncludePath>
-    <ReferencePath>$(VC_ReferencesPath_x86);</ReferencePath>
-    <SourcePath>$(VC_SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -139,14 +135,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="header\LibHTTP.h" />
-    <ClInclude Include="header\libSocket.h" />
+    <ClInclude Include="header\libhttp.h" />
+    <ClInclude Include="header\ddsocket.h" />
     <ClInclude Include="incl\http.h" />
     <ClInclude Include="incl\socket.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp\libhttp.cpp" />
-    <ClCompile Include="cpp\libsocket.cpp" />
+    <ClCompile Include="cpp\ddsocket.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

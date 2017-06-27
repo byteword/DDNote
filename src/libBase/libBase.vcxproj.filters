@@ -30,5 +30,39 @@
     <ClInclude Include="incl\thread.h">
       <Filter>헤더 파일\incl</Filter>
     </ClInclude>
+    <ClInclude Include="incl\object.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
+    <ClInclude Include="header\ddobject.h">
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\libbase.h">
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\ddmemorymng.h">
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\typeinfo.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
+    <ClInclude Include="incl\memorymng.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp\thread.cpp">
+      <Filter>소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\task.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\object.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="cpp\memorymng.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

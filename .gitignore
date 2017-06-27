@@ -12,3 +12,9 @@
 /src/libHTTP/Debug/libHTTP.tlog/CL.read.1.tlog
 /src/libHTTP/Debug/libHTTP.tlog/CL.command.1.tlog
 /src/libHTTP/Debug/libHTTP.tlog
+src/.vs/DDnote/v14/.suo
+src/DDnote.VC.db
+ipch
+Debug
+*.opendb
+src/libHTTP/libHTTP.vcxproj.user

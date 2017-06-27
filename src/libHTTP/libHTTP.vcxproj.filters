@@ -21,16 +21,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="header\LibHTTP.h">
-      <Filter>헤더 파일\header</Filter>
-    </ClInclude>
     <ClInclude Include="incl\http.h">
       <Filter>헤더 파일\incl</Filter>
     </ClInclude>
     <ClInclude Include="incl\socket.h">
       <Filter>헤더 파일\incl</Filter>
     </ClInclude>
-    <ClInclude Include="header\libSocket.h">
+    <ClInclude Include="header\libhttp.h">
+      <Filter>헤더 파일\header</Filter>
+    </ClInclude>
+    <ClInclude Include="header\ddsocket.h">
       <Filter>헤더 파일\header</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,7 +38,7 @@
     <ClCompile Include="cpp\libhttp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="cpp\libsocket.cpp">
+    <ClCompile Include="cpp\ddsocket.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
