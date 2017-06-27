@@ -51,6 +51,9 @@
     <ClInclude Include="header\ddtypeinfo.h">
       <Filter>헤더 파일\header</Filter>
     </ClInclude>
+    <ClInclude Include="incl\spinlock.h">
+      <Filter>헤더 파일\incl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp\thread.cpp">
@@ -67,5 +70,13 @@
     <ClCompile Include="cpp\memorymng.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="cpp\spinlock.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="asm_WIN64\memorymng.asm">
+      <Filter>소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>

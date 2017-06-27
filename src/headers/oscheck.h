@@ -1,4 +1,5 @@
 #pragma once
+
 #ifndef __DD_LIBBASE__OSCHECK__H__INCLUDDED__
 #define __DD_LIBBASE__OSCHECK__H__INCLUDDED__
 

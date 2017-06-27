@@ -1,10 +1,11 @@
 #pragma once
-#ifndef __DD_UTLIB_UNITTEST__H__INCLUDED__
-#define __DD_UTLIB_UNITTEST__H__INCLUDED__
 
 #include <list>
 #include <map>
 #include <iostream>
+
+#ifndef __DD_UTLIB_UNITTEST__H__INCLUDED__
+#define __DD_UTLIB_UNITTEST__H__INCLUDED__
 
 typedef void* TEST_CTX;
 typedef bool(FN_TEST)(TEST_CTX);

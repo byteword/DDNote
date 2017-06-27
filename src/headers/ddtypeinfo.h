@@ -1,12 +1,12 @@
-#ifndef __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
-#define __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
 #pragma once
 
+#ifndef __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
+#define __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
 
 struct DDTypeInfo
 {
 	// category of type
-	enum E_CATEGORY { NONE, SCALAR, OBJECT, ARRAY, FUNCTION };
+	enum E_CATEGORY { NONE, SCALAR, OBJECT, FUNCTION, BUFFER };
 	unsigned int _cat;
 
 	// size of type
@@ -16,23 +16,22 @@ struct DDTypeInfo
 	unsigned int _sizeAlloc;
 };
 
+// primitive type info
 struct DDScalarTypeInfo : DDTypeInfo
 {
 	// intializer of data
 	void(*_fnInitializer)(void* memory);
 
 	// kind of data
-	enum E_KIND { BOOL, SBYTE, UBYTE, SSHORT, USHORT, SWORD, UWORD, SDWORD, UDWORD, SQWORD, UQWORD, FLOAT32, FLOAT64, FLOAT80, POINTER };
+	enum E_KIND { BOOL, INT8, UINT8, INT16, UINT16, INT32, UINT32, INT64, UINT64, FLOAT32, FLOAT64, FLOAT128, POINTER };
 	unsigned int _kind;
 };
 
-struct DDArrayTypeInfo : DDTypeInfo
+// buffer type info
+struct DDBufferInfo : DDTypeInfo
 {
-	// intializer of data
-	DDTypeInfo *_elementType;
-
-	// length of array
-	unsigned int _length;
+	// align of index
+	unsigned int _align;
 };
 
 // class type info

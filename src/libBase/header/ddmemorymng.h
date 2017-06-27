@@ -1,12 +1,16 @@
+#pragma once
+
+#include <assert.h>
+#include <atomic>
+#include "ddtypeinfo.h"
+
 #ifndef __DD_LIBBASE__DDMEMORY_MNG__H__INCLUDDED__
 #define __DD_LIBBASE__DDMEMORY_MNG__H__INCLUDDED__
-#pragma once
+
 
 #ifndef NULL
 #define NULL (0)
 #endif // NULL
-
-#include "ddtypeinfo.h"
 
 class DDVarHeader;
 
@@ -24,7 +28,7 @@ class DDVarHeader
 	friend class DDMemoryMng;
 private:
 	// reference count
-	unsigned int _ref;
+	std::atomic<int> _ref;
 	
 	// type information
 	DDTypeInfo* _type;
@@ -35,17 +39,23 @@ private:
 	// for destructor
 	typedef void DDDestructor();
 	DDDestructor* _destructor;
-	
+
 public:
-	inline void AddRef() { _ref++; }
+	DDVarHeader();
+
+	inline void AddRef() { 
+		_ref++;
+	}
 	inline void Release() {
-		_ref--;
-		if (_ref == NULL)
+		assert(_ref > 0);
+
+		if ( --_ref == 0 )
 		{
 			this->_destructor();
 			_mm->Free(this);
 		}
 	}
+
 public:
 	inline void* Body()
 	{

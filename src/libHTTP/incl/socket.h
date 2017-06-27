@@ -1,5 +1,3 @@
-#ifndef __DD_LIBHTTP__SOCKET__H__INCLUDDED__
-#define __DD_LIBHTTP__SOCKET__H__INCLUDDED__
 #pragma once
 
 #include <oscheck.h>
@@ -26,6 +24,10 @@
 #include <stdlib.h>
 
 #include "../header/ddsocket.h"
+
+
+#ifndef __DD_LIBHTTP__SOCKET__H__INCLUDDED__
+#define __DD_LIBHTTP__SOCKET__H__INCLUDDED__
 
 struct _DDSocketCtx 
 {
