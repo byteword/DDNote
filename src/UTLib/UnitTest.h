@@ -1,6 +1,6 @@
 #pragma once
-#ifndef __UTLIB_UNITTEST__H__INCLUDED__
-#define __UTLIB_UNITTEST__H__INCLUDED__
+#ifndef __DD_UTLIB_UNITTEST__H__INCLUDED__
+#define __DD_UTLIB_UNITTEST__H__INCLUDED__
 
 #include <list>
 #include <map>
@@ -79,4 +79,4 @@ protected:
 
 };
 
-#endif // __UTLIB_UNITTEST__H__INCLUDED__
+#endif // __DD_UTLIB_UNITTEST__H__INCLUDED__

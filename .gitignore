@@ -18,3 +18,5 @@ ipch
 Debug
 *.opendb
 src/libHTTP/libHTTP.vcxproj.user
+/homepage/api/api.php
+/Database/initialize.sql
