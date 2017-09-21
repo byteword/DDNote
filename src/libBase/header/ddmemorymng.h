@@ -12,18 +12,36 @@
 #define NULL (0)
 #endif // NULL
 
-class DDVarHeader;
+class DDVarTS;
 
 // class for Memeory management 
 class DDMemoryMng
 {
 public:
-	void Free(DDVarHeader* pvar);
+	enum E_AllocOption {
+		E_AO_LOCAL	= 0x00000001,
+		E_AO_THREAD = 0x00000002,
+		E_AO_PROCESS = 0x00000003,
+		E_AO_SYSTEM = 0x00000007,
+		E_AO_KERNEL = 0x0000000F
+	};
+public:
+	static DDVarTS* Alloc(size_t size, unsigned long options = 0);
+	void Free(DDVarTS* pvar);
 };
 
 #pragma pack(push, 4)
-// class for DDVar header
-class DDVarHeader
+class DDBufferInfo
+{
+public:
+	size_t _allocSizeInByte;
+	size_t _alignSize;
+	size_t _arrayCount;
+	size_t _unitSize;
+};
+
+// class for DD Variable Tombstone
+class DDVarTS
 {
 	friend class DDMemoryMng;
 private:
@@ -33,6 +51,9 @@ private:
 	// type information
 	DDTypeInfo* _type;
 
+	// buffer information
+	DDBufferInfo* _buff;
+
 	// memory manager for allocation and dealloc
 	DDMemoryMng* _mm;
 
@@ -41,7 +62,7 @@ private:
 	DDDestructor* _destructor;
 
 public:
-	DDVarHeader();
+	DDVarTS();
 
 	inline void AddRef() { 
 		_ref++;
@@ -62,9 +83,9 @@ public:
 		return reinterpret_cast<void*>(this + 1 );
 	}
 
-	inline static DDVarHeader* Header(void* p)
+	inline static DDVarTS* Header(void* p)
 	{
-		return reinterpret_cast<DDVarHeader*>(p) - 1;
+		return reinterpret_cast<DDVarTS*>(p) - 1;
 	}
 };
 
@@ -76,7 +97,7 @@ class DDVarPtr
 
 private:
 
-	DDVarHeader *_header;        // 4 byte
+	DDVarTS *_header;        // 4 byte
 
 public:
 
@@ -85,7 +106,7 @@ public:
 		_header = NULL;
 	}
 
-	inline explicit DDVarPtr(DDVarHeader* header)
+	inline explicit DDVarPtr(DDVarTS* header)
 	{
 		_header = NULL;
 		Set(header);
@@ -136,7 +157,7 @@ public:
 
 private:
 
-	void Set(DDVarHeader* header)
+	void Set(DDVarTS* header)
 	{
 		if (this->_header != NULL)
 			this->_header->Release();
@@ -160,15 +181,15 @@ public:
 
 // generic pointer template for DDVar
 template<class T>
-class TPtr : public DDVarPtr
+class DDVPtr_T : public DDVarPtr
 {
 public:
-	inline TPtr() { }
-	inline explicit TPtr(T* ptr) : DDVarPtr(DDVarHeader::Header(ptr)) {}
-	inline explicit TPtr(const TPtr& ptr) : DDVarPtr(ptr) {}
+	inline DDVPtr_T() { }
+	inline explicit DDVPtr_T(T* ptr) : DDVarPtr(DDVarTS::Header(ptr)) {}
+	inline explicit DDVPtr_T(const DDVPtr_T& ptr) : DDVarPtr(ptr) {}
 
 	template<class V>
-	inline explicit TPtr(const TPtr<V>& ptr) : DDVarPtr((const DDVarPtr&)ptr)
+	inline explicit DDVPtr_T(const DDVPtr_T<V>& ptr) : DDVarPtr((const DDVarPtr&)ptr)
 	{
 	}
 
@@ -185,38 +206,38 @@ public:
 	}
 
 	template<class V>
-	inline bool operator == (const TPtr<V>& ptr) const
+	inline bool operator == (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) == ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator != (const TPtr<V>& ptr) const
+	inline bool operator != (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) != ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator < (const TPtr<V>& ptr) const
+	inline bool operator < (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) < ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator <= (const TPtr<V>& ptr) const
+	inline bool operator <= (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) <= ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator > (const TPtr<V>& ptr) const
+	inline bool operator > (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) > ((const DDVarPtr&)ptr);
 	}
 
 
 	template<class V>
-	inline bool operator >= (const TPtr<V>& ptr) const
+	inline bool operator >= (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) >= ((const DDVarPtr&)ptr);
 	}
@@ -224,7 +245,7 @@ public:
 public:
 
 	template<class V>
-	inline TPtr operator = (const TPtr<T>& ptr)
+	inline DDVPtr_T operator = (const DDVPtr_T<T>& ptr)
 	{
 		((const DDVarPtr&)*this) = ((const DDVarPtr&)ptr);
 		return *this;

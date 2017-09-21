@@ -3,21 +3,23 @@
 #ifndef __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
 #define __DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__
 
-struct DDTypeInfo
+struct DDTypeInfoBsae
 {
 	// category of type
-	enum E_CATEGORY { NONE, SCALAR, OBJECT, FUNCTION, BUFFER };
+	enum E_CATEGORY { NONE, SCALAR, OBJECT, FUNCTION, VARIED };
 	unsigned int _cat;
 
 	// size of type
 	unsigned int _size;
 
-	// size of type should be allocate
-	unsigned int _sizeAlloc;
+};
+
+struct DDVariedTypeInfo : DDTypeInfoBsae
+{
 };
 
 // primitive type info
-struct DDScalarTypeInfo : DDTypeInfo
+struct DDScalarTypeInfo : DDTypeInfoBsae
 {
 	// intializer of data
 	void(*_fnInitializer)(void* memory);
@@ -27,15 +29,8 @@ struct DDScalarTypeInfo : DDTypeInfo
 	unsigned int _kind;
 };
 
-// buffer type info
-struct DDBufferInfo : DDTypeInfo
-{
-	// align of index
-	unsigned int _align;
-};
-
 // class type info
-struct DDClassInfo : DDTypeInfo
+struct DDClassInfo : DDTypeInfoBsae
 {
 	// size of information structure
 	unsigned int _size;
@@ -51,7 +46,7 @@ struct DDClassInfo : DDTypeInfo
 };
 
 // function type info
-struct DDFunctionTypeInfo : DDTypeInfo
+struct DDFunctionTypeInfo : DDTypeInfoBsae
 {
 	// size of struct
 	unsigned int _size;
@@ -72,6 +67,14 @@ struct DDFunctionTypeInfo : DDTypeInfo
 
 	// information for arguments
 	unsigned int _argc;
+};
+
+union DDTypeInfo {
+	DDTypeInfoBsae base;
+	DDScalarTypeInfo scalar;
+	DDClassInfo obj;
+	DDFunctionTypeInfo fn;
+	DDVariedTypeInfo var;
 };
 
 #endif //__DD_LIBBASE__DD_TYPE_INFO__H__INCLUDDED__

@@ -160,15 +160,15 @@ public:
 
 // generic pointer template for DDVar
 template<class T>
-class TPtr : public DDVarPtr
+class DDVPtr_T : public DDVarPtr
 {
 public:
-	inline TPtr() { }
-	inline explicit TPtr(T* ptr) : DDVarPtr(DDVarHeader::Header(ptr)) {}
-	inline explicit TPtr(const TPtr& ptr) : DDVarPtr(ptr) {}
+	inline DDVPtr_T() { }
+	inline explicit DDVPtr_T(T* ptr) : DDVarPtr(DDVarHeader::Header(ptr)) {}
+	inline explicit DDVPtr_T(const DDVPtr_T& ptr) : DDVarPtr(ptr) {}
 
 	template<class V>
-	inline explicit TPtr(const TPtr<V>& ptr) : DDVarPtr((const DDVarPtr&)ptr)
+	inline explicit DDVPtr_T(const DDVPtr_T<V>& ptr) : DDVarPtr((const DDVarPtr&)ptr)
 	{
 	}
 
@@ -185,38 +185,38 @@ public:
 	}
 
 	template<class V>
-	inline bool operator == (const TPtr<V>& ptr) const
+	inline bool operator == (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) == ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator != (const TPtr<V>& ptr) const
+	inline bool operator != (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) != ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator < (const TPtr<V>& ptr) const
+	inline bool operator < (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) < ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator <= (const TPtr<V>& ptr) const
+	inline bool operator <= (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) <= ((const DDVarPtr&)ptr);
 	}
 
 	template<class V>
-	inline bool operator > (const TPtr<V>& ptr) const
+	inline bool operator > (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) > ((const DDVarPtr&)ptr);
 	}
 
 
 	template<class V>
-	inline bool operator >= (const TPtr<V>& ptr) const
+	inline bool operator >= (const DDVPtr_T<V>& ptr) const
 	{
 		return ((const DDVarPtr&)*this) >= ((const DDVarPtr&)ptr);
 	}
@@ -224,7 +224,7 @@ public:
 public:
 
 	template<class V>
-	inline TPtr operator = (const TPtr<T>& ptr)
+	inline DDVPtr_T operator = (const DDVPtr_T<T>& ptr)
 	{
 		((const DDVarPtr&)*this) = ((const DDVarPtr&)ptr);
 		return *this;

@@ -3,11 +3,20 @@
 
 DDVarPtr DDVarPtr::NULLPtr;
 
-DDVarHeader::DDVarHeader()
+DDVarTS::DDVarTS()
 {
 }
 
-void DDMemoryMng::Free(DDVarHeader* pvar)
+
+void* DDMemoryMng::Alloc(size_t size, unsigned long options)
+{
+	if (options == 0)
+	{
+		// automatic or default
+	}
+}
+
+void DDMemoryMng::Free(DDVarTS* pvar)
 {
 	// TODO: Implement
 	assert(pvar != NULL);
