@@ -181,3 +181,7 @@
 /src/.vs/DDnote/v14
 /src
 /.vs/DDNote/v15/.suo
+/.vs/DDNote/v15/ipch
+/source/client/win32/DDNote/Debug
+/source/client/win32/DDNote/DDNote.aps
+/.vs/DDNote/v15/Browse.VC.opendb
