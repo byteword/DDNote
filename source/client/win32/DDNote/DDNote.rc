@@ -1,11 +1,11 @@
-//Microsoft Visual C++ì—ì„œ ìƒì„±í•œ ë¦¬ì†ŒìŠ¤ ìŠ¤í¬ë¦½íŠ¸ìž…ë‹ˆë‹¤.
+//Microsoft Visual C++¿¡¼­ »ý¼ºÇÑ ¸®¼Ò½º ½ºÅ©¸³Æ®ÀÔ´Ï´Ù.
 //
 #include "resource.h"
 
 #define APSTUDIO_READONLY_SYMBOLS
 /////////////////////////////////////////////////////////////////////////////
 //
-// TEXTINCLUDE 2 ë¦¬ì†ŒìŠ¤ì—ì„œ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.
+// TEXTINCLUDE 2 ¸®¼Ò½º¿¡¼­ »ý¼ºµÇ¾ú½À´Ï´Ù.
 //
 #ifndef APSTUDIO_INVOKED
 #include "targetver.h"
@@ -21,36 +21,36 @@ LANGUAGE 18, 1
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ì•„ì´ì½˜
+// ¾ÆÀÌÄÜ
 //
 
-// ì‘ìš© í”„ë¡œê·¸ëž¨ ì•„ì´ì½˜ì´ ëª¨ë“  ì‹œìŠ¤í…œì—ì„œ ì¼ê´€ëœ ìƒíƒœë¥¼ ìœ ì§€í•˜ë„ë¡ í•˜ê¸° ìœ„í•´
-// ê°€ìž¥ ë‚®ì€ ID ê°’ì„ ê°–ëŠ” ì•„ì´ì½˜ì´ ë§¨ ì²˜ìŒ ë°°ì¹˜ë©ë‹ˆë‹¤.
+// ÀÀ¿ë ÇÁ·Î±×·¥ ¾ÆÀÌÄÜÀÌ ¸ðµç ½Ã½ºÅÛ¿¡¼­ ÀÏ°üµÈ »óÅÂ¸¦ À¯ÁöÇÏµµ·Ï ÇÏ±â À§ÇØ
+// °¡Àå ³·Àº ID °ªÀ» °®´Â ¾ÆÀÌÄÜÀÌ ¸Ç Ã³À½ ¹èÄ¡µË´Ï´Ù.
 
 IDI_DDNOTE       ICON         "DDNote.ico"
 IDI_SMALL               ICON         "small.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ë©”ë‰´
+// ¸Þ´º
 //
 
 IDC_DDNOTE MENU
 BEGIN
-    POPUP "íŒŒì¼(&F)"
+    POPUP "ÆÄÀÏ(&F)"
     BEGIN
-        MENUITEM "ëë‚´ê¸°(&X)",                IDM_EXIT
+        MENUITEM "³¡³»±â(&X)",                IDM_EXIT
     END
-    POPUP "ë„ì›€ë§(&H)"
+    POPUP "µµ¿ò¸»(&H)"
     BEGIN
-        MENUITEM "ì •ë³´(&A)...",           IDM_ABOUT
+        MENUITEM "Á¤º¸(&A)...",           IDM_ABOUT
     END
 END
 
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ì•¡ì…€ëŸ¬ë ˆì´í„° í‚¤
+// ¾×¼¿·¯·¹ÀÌÅÍ Å°
 //
 
 IDC_DDNOTE ACCELERATORS
@@ -62,18 +62,18 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ëŒ€í™” ìƒìž
+// ´ëÈ­ »óÀÚ
 //
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "DDNote ì •ë³´"
+CAPTION "DDNote Á¤º¸"
 FONT 9, "MS Shell Dlg"
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
-    LTEXT           "DDNote, ë²„ì „ 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "DDNote, ¹öÀü 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2017",IDC_STATIC,42,26,114,8
-    DEFPUSHBUTTON   "í™•ì¸",IDOK,113,41,50,14,WS_GROUP
+    DEFPUSHBUTTON   "È®ÀÎ",IDOK,113,41,50,14,WS_GROUP
 END
 
 /////////////////////////////////////////////////////////////////////////////
@@ -125,7 +125,7 @@ END
 
 /////////////////////////////////////////////////////////////////////////////
 //
-// ë¬¸ìžì—´ í…Œì´ë¸”
+// ¹®ÀÚ¿­ Å×ÀÌºí
 //
 
 STRINGTABLE
@@ -142,8 +142,8 @@ END
 #ifndef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
 //
-// TEXTINCLUDE 3 ë¦¬ì†ŒìŠ¤ì—ì„œ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.
+// TEXTINCLUDE 3 ¸®¼Ò½º¿¡¼­ »ý¼ºµÇ¾ú½À´Ï´Ù.
 //
 
 /////////////////////////////////////////////////////////////////////////////
-#endif    // APSTUDIO_INVOKEDê°€ ì•„ë‹˜
+#endif    // APSTUDIO_INVOKED°¡ ¾Æ´Ô

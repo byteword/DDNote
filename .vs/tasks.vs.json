@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-DDNote",
+      "appliesTo": "source/client/win32/DDNote/DDNote.rc",
+      "type": "launch"
+    }
+  ]
+}
